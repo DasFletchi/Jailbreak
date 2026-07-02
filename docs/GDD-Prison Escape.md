@@ -1,4 +1,4 @@
-# GDD – *[Arbeitstitel: siehe Kapitel 15]*
+# GDD – *Jailbreak*
 
 **Engine:** Godot 4.7+ (Forward+), reines GDScript, kein C#
 **Genre:** Co-op Prison Escape (Emergent Immersive Sim + Chaos)
@@ -189,7 +189,7 @@ mindestens zwei der vier Kern-Systeme angebunden ist.
 
 - **Tool** – Crowbar, Keycard, Wire Cutters, Uniform (Flucht-Requirements) (errinert mich an granny ngl)
 - **Weapon** – Schraubenschlüssel, Skalpell, Brechstange (Doppelnutzung Werkzeug/Waffe)
-- **Food** – heilt, macht beim Essen Lärm (Trade-off)
+- **Food**
 - **Key** – spezifische Türen
 - **Misc** – Zahnbürste (Waffe/Dietrich/Ablenkung), Spiegelscherbe (um Ecken schauen),
   Seife (Boden glitschig = Ablenkungs-Trap) (holy trailer von Cuffbust lol)
@@ -215,7 +215,6 @@ Stellschraube für Schwierigkeitskurve.
   `stackable`, `effect_value`
 - `UseCase`-Tags statt harter Kategorien (Zahnbürste: `WEAPON`, `LOCKPICK`,
   `DISTRACTION`) – mehrere Lösungswege direkt im Datenmodell
-- Flucht-Requirements: 3 von 5 Items pro Runde zufällig als "gebraucht" markiert
 
 ---
 
@@ -225,7 +224,7 @@ Stellschraube für Schwierigkeitskurve.
 
 - Plugin übernimmt MultiplayerPeers, Lobby-Erstellung, Netzwerk-Switching,
   Server-Verbindungen
-- Kein Steam nötig, reines ENet, IP-basiert (später optional Lobby-Code-Layer)
+- Kein Steam nötig, reines ENet, IP-basiert (später optional Lobby-Code-Layer, z.b. mit Steam)
 - 2–6 Spieler
 - RPC-basierte Aktionen (`collect_requirement`, `movement`, `interact`, ...)
 
@@ -234,7 +233,7 @@ Stellschraube für Schwierigkeitskurve.
 - **NetworkManager** – Peer-Connections, Spielerliste, Host-Migration (Stretch)
 - **GameManager** – Rundenlogik, State-Machine, Escape-Conditions
 - **PrisonGenerator** – generiert serverseitig, Seed-Sync via RPC
-- **ProgressionManager** – Rap-Sheet-Daten lokal pro Client (kein Server-Account im MVP)
+- **ProgressionManager** – Rap-Sheet-Daten lokal pro Client
 
 ---
 
@@ -244,50 +243,8 @@ Stellschraube für Schwierigkeitskurve.
 - Host/Join + IP-Input, Name, Charakter-Editor, Player List + Ready-Check
 
 ### HUD
-- Inventar (max. 4 Slots), Flucht-Requirements-Checkliste, Health, Runden-Timer
+- Inventar (max. 4 Slots)(default 3), Health, Runden-Timer
 - **Alarm-Meter** (sichtbar) – Transparenz-Prinzip aus Kapitel 2
-
-### Debug (Dev)
-- Label3D mit Generierungs-Info, Room-Übersicht, Sound-Radius-Visualisierung
-
----
-
-## 11. Technical Architecture
-
-```
-addons/easy_peasy_multiplayer/   # Plugin (2.0-refactor Branch)
-ai/
-  GuardAI.gd                     # State-Machine
-autoload/
-  GameManager.gd
-  NetworkManager.gd
-  PrisonGenerator.gd
-  ProgressionManager.gd          # Rap-Sheet / Contraband-Perks
-items/
-  ItemData.gd
-rooms/
-  *.tscn                         # 12 Room-Szenen
-scenes/
-  title_screen.tscn
-  Game.tscn
-  Player.tscn                    # Hülle: Movement + Interaktion, KEINE Stats
-  Guard.tscn
-  Item.tscn
-scripts/
-  RoomBase.gd
-  PlayerController.gd
-  ItemBase.gd
-  GameWorld.gd
-  Door.gd
-  MainMenu.gd
-  CharacterCosmetics.gd          # Avatar-Baukasten-Logik
-docs/
-  GDD.md
-```
-
-**Dependencies:** Godot 4.7+, easy-peasy-multiplayer, Jolt Physics, Forward+,
-keine externen Abhängigkeiten, reines GDScript.
-
 ---
 
 ## 12. Events & Wiederspielbarkeit
@@ -305,36 +262,18 @@ Item-Platzierung, offene/verschlossene Türen, Hund ja/nein – pro Runde neu ge
 
 ---
 
-## 13. Dev Roadmap
-
-1. Core Setup – Projekt, easy-peasy integriert, Player-Controller
-2. Rooms – 12 Räume mit Door-Points, Item-Spawns
-3. Generator – Graph-Layout, Connections, Seeds
-4. Guard AI – State-Machine, Persönlichkeiten, Sight/Hearing
-5. Items – Resources, Loot-Tables, Inventar
-6. Multiplayer – Lobby, RPCs, Sync
-7. Emergent Systems – Sound/Licht/Alarm/Tarnung-Layer, Events
-8. Charakter-Editor + ProgressionManager (Rap Sheet, Cosmetics)
-9. Proximity Voice
-10. UI/UX
-11. Polish – Juice, VFX, SFX, Balancing
-
----
-
 ## 14. Monetization
 
 - Launch: $5–8, PC (Steam/Itch.io)
 - Kein P2W, keine Mikrotransaktionen – Rap-Sheet rein zeitbasiert/kosmetisch
-- Viral-Potential durch Clips, Friendslop-Zielgruppe
+- Viral-Potential durch Clips, **Friendslop**-Zielgruppe
 
 ---
 
 ## 15. Namensvorschläge
 
-1. **Lockdown Party** – Alarm-System-Begriff + Friendslop-Vibe
-2. **Cellmates** – warm, funny, Co-op-Fokus im Namen
-3. **BreakOUT** – doppeldeutig
-4. **The Slammer** – kurz, catchy
-5. **Riot Hour** – klingt nach Chaos-Systemen
-6. **Jailbreak** – Klassiker
-7. **Out** – minimalistisch, brandbar
+1. **Cellmates** – warm, funny, Co-op-Fokus im Namen
+2. **Jailbreak** – Klassiker
+
+
+## VISUAL BIBLE
