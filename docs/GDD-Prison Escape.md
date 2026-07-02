@@ -1,12 +1,11 @@
-# FriendslopEZPZ – Game Design Document
+
 
 > **Working Title:** FriendslopEZPZ  
 > **Engine:** Godot 4.7+ (Forward Plus)  
 > **Genre:** Co-op Prison Escape (Action + Chaos)  
-> **Players:** 2–6  
-> **Networking:** easy-peasy-multiplayer 2.0 (ENet, kein Steam nötig)  
-> **Target Price:** $5–8 Launch  
-> **Inspiration:** rekrap-style gameplay (freestyle, bullet points, clip-worthy)
+> **Players:** normale Co-Op grössen
+> **Networking:** easy-peasy-multiplayer 2.0 (ENet, kein Steam nötig, selsbt wenn nd so bad ngl)  
+> **Target Price:** $5–8 Launch  (unter 5€ pusht es staem nicht, über setzt zu hohe expectations)
 
 ---
 
@@ -289,7 +288,3 @@ docs/
 6. **The Ditch** – "We're ditching this place"
 7. **Out** – ein Wort, minimalistisch
 8. **FriendslopEZPZ** – aktueller Dev-Name, beschreibt was es ist
-
----
-*GDD erstellt aus Chat-Verlauf + bestehender Codebase (prison_escape_friendslop).  
-Nächstes Ziel: Code aus prison_escape_friendslop ins friendslop-ezpz Repo portieren.*
