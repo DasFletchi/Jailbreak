@@ -27,7 +27,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/easy_peasy_multiplayer/plugin.cfg")
+enabled=PackedStringArray("res://addons/easy_peasy_multiplayer/plugin.cfg", "res://addons/godotsteam/plugin.cfg")
 
 [file_customization]
 
