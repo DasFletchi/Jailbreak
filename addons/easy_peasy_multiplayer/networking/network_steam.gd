@@ -126,7 +126,8 @@ func _on_lobby_joined(lobby_id : int, _permissions : int, _locked : bool, respon
 		if id != SteamInfo.steam_api.getSteamID():
 			_connect_socket(id)
 			if Network._is_verbose:
-				print("Connecting client to socket...")
+						print("Connecting client to socket...")
+						print("Verbinde Client mit Socket...")
 	else:
 		# Get the failure reason
 		var FAIL_REASON : String

@@ -44,7 +44,65 @@ text = "ENet"
 layout_mode = 2
 text = "Steam"
 
-[connection signal="pressed" from="VBoxContainer/Singleplayer" to="." method="_on_play_button_pressed"]
+[node name="EnetTab" type="VBoxContainer" parent="2nd Screen" unique_id=3001]
+visible = false
+offset_left = 480.0
+offset_top = 295.0
+offset_right = 750.0
+offset_bottom = 420.0
+
+[node name="IP" type="LineEdit" parent="2nd Screen/EnetTab" unique_id=3002]
+layout_mode = 2
+placeholder_text = "IP Address (leave empty = localhost)"
+
+[node name="EnetButtons" type="HBoxContainer" parent="2nd Screen/EnetTab" unique_id=3003]
+layout_mode = 2
+
+[node name="Host" type="Button" parent="2nd Screen/EnetTab/EnetButtons" unique_id=3004]
+layout_mode = 2
+text = "Host"
+
+[node name="Join" type="Button" parent="2nd Screen/EnetTab/EnetButtons" unique_id=3005]
+layout_mode = 2
+text = "Join"
+
+[node name="Back" type="Button" parent="2nd Screen/EnetTab/EnetButtons" unique_id=3006]
+layout_mode = 2
+text = "Back"
+
+[node name="SteamTab" type="VBoxContainer" parent="2nd Screen" unique_id=4001]
+visible = false
+offset_left = 480.0
+offset_top = 295.0
+offset_right = 750.0
+offset_bottom = 480.0
+
+[node name="steam_lobby_list" type="VBoxContainer" parent="2nd Screen/SteamTab" unique_id=4002]
+layout_mode = 2
+
+[node name="SteamButtons" type="HBoxContainer" parent="2nd Screen/SteamTab" unique_id=4003]
+layout_mode = 2
+
+[node name="Host" type="Button" parent="2nd Screen/SteamTab/SteamButtons" unique_id=4004]
+layout_mode = 2
+text = "Host Lobby"
+
+[node name="Refresh" type="Button" parent="2nd Screen/SteamTab/SteamButtons" unique_id=4005]
+layout_mode = 2
+text = "Refresh"
+
+[node name="Back" type="Button" parent="2nd Screen/SteamTab/SteamButtons" unique_id=4006]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Singleplayer" to="." method="_on_singleplayer_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Multiplayer" to="." method="_on_multiplayer_button_pressed"]
 [connection signal="pressed" from="2nd Screen/HBoxContainer/Enet" to="." method="_on_enet_pressed"]
 [connection signal="pressed" from="2nd Screen/HBoxContainer/Steam" to="." method="_on_steam_pressed"]
+[connection signal="text_submitted" from="2nd Screen/EnetTab/IP" to="." method="_on_enet_ip_submitted"]
+[connection signal="pressed" from="2nd Screen/EnetTab/EnetButtons/Host" to="." method="_on_enet_host_pressed"]
+[connection signal="pressed" from="2nd Screen/EnetTab/EnetButtons/Join" to="." method="_on_enet_join_pressed"]
+[connection signal="pressed" from="2nd Screen/EnetTab/EnetButtons/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="2nd Screen/SteamTab/SteamButtons/Host" to="." method="_on_steam_host_pressed"]
+[connection signal="pressed" from="2nd Screen/SteamTab/SteamButtons/Refresh" to="." method="_on_steam_refresh_pressed"]
+[connection signal="pressed" from="2nd Screen/SteamTab/SteamButtons/Back" to="." method="_on_back_pressed"]

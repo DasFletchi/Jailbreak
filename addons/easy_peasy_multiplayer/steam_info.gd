@@ -37,24 +37,43 @@ func _process(_delta: float) -> void:
 		steam_api.run_callbacks()
 
 func initialize_steam() -> void:
-	if Engine.has_singleton("Steam"):
-		steam_api = Engine.get_singleton("Steam")
+	if not Engine.has_singleton("Steam"):
+		print("[SteamInfo] Steam-Singleton nicht gefunden. GodotSteam GDExtension nicht geladen -> ENet-only Modus.")
+		print("[SteamInfo] Steam singleton not found. GodotSteam GDExtension not loaded -> ENet-only mode.")
+		return
 
-		# Gather additional data
-		is_on_steam_deck = steam_api.isSteamRunningOnSteamDeck()
-		is_online = steam_api.loggedOn()
-		is_owned = steam_api.isSubscribed()
-		is_family_shared = steam_api.isSubscribedFromFamilySharing()
-		is_free_weekend = steam_api.isSubscribedFromFreeWeekend()
-		timed_trial_stats = steam_api.isTimedTrial()
-		app_owner = steam_api.getAppOwner()
-		steam_id = steam_api.getSteamID()
-		steam_username = steam_api.getPersonaName()
-		auth_ticket = steam_api.getAuthSessionTicket()
+	steam_api = Engine.get_singleton("Steam")
 
-		if not is_owned or is_family_shared or is_free_weekend:
-			print("User does not own this game")
-			get_tree().quit()
+	# WICHTIG: Ohne diesen Aufruf ist die Steamworks-API nicht initialisiert!
+	# Jeder weitere Steam.xxx()-Aufruf danach kann sonst die Engine hart zum
+	# Absturz bringen, da intern kein gültiger Steamworks-Kontext existiert.
+	var initialize_response: Dictionary = steam_api.steamInitEx()
+	if initialize_response["status"] != 0: # 0 = STEAM_API_INIT_RESULT_OK
+		print("[SteamInfo] Steam-Initialisierung fehlgeschlagen: %s -> ENet-only Modus." % initialize_response["verbal"])
+		steam_api = null
+		return
+
+	# Gather additional data
+	is_on_steam_deck = steam_api.isSteamRunningOnSteamDeck()
+	is_online = steam_api.loggedOn()
+	is_owned = steam_api.isSubscribed()
+	is_family_shared = steam_api.isSubscribedFromFamilySharing()
+	is_free_weekend = steam_api.isSubscribedFromFreeWeekend()
+	timed_trial_stats = steam_api.isTimedTrial()
+	app_owner = steam_api.getAppOwner()
+	steam_id = steam_api.getSteamID()
+	steam_username = steam_api.getPersonaName()
+	auth_ticket = steam_api.getAuthSessionTicket()
+
+	print("[SteamInfo] Steam erfolgreich initialisiert als %s (SteamID: %s)" % [steam_username, steam_id])
+
+	# Hinweis: Diese DRM-artige Prüfung wird bewusst NICHT mit get_tree().quit()
+	# durchgesetzt, damit z.B. Family Share / Free Weekend Nutzer weiterhin
+	# spielen können. Falls du das doch erzwingen willst, aktiviere die
+	# auskommentierte Zeile unten.
+	if not is_owned or is_family_shared or is_free_weekend:
+		print("[SteamInfo] Hinweis: User besitzt das Spiel laut Steam nicht direkt (Family Share/Free Weekend/o.ä.)")
+		# get_tree().quit()
 
 #region User Authentication [WIP, NOT FUNCTIONING]
 # https://godotsteam.com/tutorials/authentication/#__tabbed_1_2

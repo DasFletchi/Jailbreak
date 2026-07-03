@@ -17,6 +17,7 @@ func _ready() -> void:
 	var INIT = Steam.steam_init()
 	if INIT['status'] != 1:
 		print("Steam initialization failed: " + str(INIT['verbal']) + " Shutting down...")
+		print("Steam-Initialisierung fehlgeschlagen: " + str(INIT['verbal']) + " Beende...")
 		get_tree().quit()
 
 	ONLINE = Steam.loggedOn()
