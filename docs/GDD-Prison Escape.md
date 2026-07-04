@@ -234,6 +234,9 @@ Stellschraube für Schwierigkeitskurve.
 - ~~**GameManager** – Rundenlogik, State-Machine, Escape-Conditions~~
 - ~~**PrisonGenerator** – generiert serverseitig, Seed-Sync via RPC~~
 - ~~**ProgressionManager** – Rap-Sheet-Daten lokal pro Client~~
+  
+  
+  CURRENTLY THINKING OF ALTERNATIVES
 
 ---
 
