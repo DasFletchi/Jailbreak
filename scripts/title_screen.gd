@@ -1,29 +1,13 @@
 extends Node2D
+@onready var _2_nd_screen_multiplayer: Node2D = $"2nd Screen Multiplayer"
+@onready var _1_st_container: VBoxContainer = $"1st Container"
 
 
 func _on_singleplayer_button_pressed() -> void:
-	pass
+	print("temp singleplayer button")
 
 
 func _on_multiplayer_button_pressed() -> void:
-	pass
-
-
-func _on_enet_pressed() -> void:
-	pass
-
-
-func _on_enet_ip_submitted(new_text: String) -> void:
-	pass
-
-
-func _on_enet_host_pressed() -> void:
-	pass
-
-
-func _on_enet_join_pressed() -> void:
-	pass
-
-
-func _on_back_pressed() -> void:
-	pass
+	print("multiplayer button pressed")
+	_2_nd_screen_multiplayer.show()
+	_1_st_container.hide()

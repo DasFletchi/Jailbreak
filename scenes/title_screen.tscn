@@ -13,63 +13,35 @@ text = "JAILBREAK"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=78630125]
+[node name="1st Container" type="VBoxContainer" parent="." unique_id=78630125]
 offset_left = 390.0
 offset_top = 260.0
 offset_right = 749.0
 offset_bottom = 334.0
 
-[node name="Singleplayer" type="Button" parent="VBoxContainer" unique_id=1069703388]
+[node name="Singleplayer" type="Button" parent="1st Container" unique_id=1069703388]
 layout_mode = 2
 text = "Singleplayer"
 
-[node name="Multiplayer" type="Button" parent="VBoxContainer" unique_id=583964896]
+[node name="Multiplayer" type="Button" parent="1st Container" unique_id=583964896]
 layout_mode = 2
 text = "Multiplayer"
 
-[node name="2nd Screen" type="Node2D" parent="." unique_id=1213294067]
+[node name="2nd Screen Multiplayer" type="Node2D" parent="." unique_id=1213294067]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="2nd Screen" unique_id=794607381]
-visible = false
-offset_left = 535.0
+[node name="HOST" type="Button" parent="2nd Screen Multiplayer" unique_id=776052761]
+offset_left = 390.0
 offset_top = 295.0
-offset_right = 642.0
+offset_right = 562.0
 offset_bottom = 326.0
+text = "HOST"
 
-[node name="Enet" type="Button" parent="2nd Screen/HBoxContainer" unique_id=1363907834]
-layout_mode = 2
-text = "ENet"
-
-[node name="EnetTab" type="VBoxContainer" parent="2nd Screen" unique_id=3001]
-visible = false
-offset_left = 480.0
+[node name="JOIN" type="Button" parent="2nd Screen Multiplayer" unique_id=208814499]
+offset_left = 570.0
 offset_top = 295.0
-offset_right = 750.0
-offset_bottom = 420.0
+offset_right = 748.0
+offset_bottom = 326.0
+text = "JOIN"
 
-[node name="IP" type="LineEdit" parent="2nd Screen/EnetTab" unique_id=3002]
-layout_mode = 2
-placeholder_text = "IP Address (leave empty = localhost)"
-
-[node name="EnetButtons" type="HBoxContainer" parent="2nd Screen/EnetTab" unique_id=3003]
-layout_mode = 2
-
-[node name="Host" type="Button" parent="2nd Screen/EnetTab/EnetButtons" unique_id=3004]
-layout_mode = 2
-text = "Host"
-
-[node name="Join" type="Button" parent="2nd Screen/EnetTab/EnetButtons" unique_id=3005]
-layout_mode = 2
-text = "Join"
-
-[node name="Back" type="Button" parent="2nd Screen/EnetTab/EnetButtons" unique_id=3006]
-layout_mode = 2
-text = "Back"
-
-[connection signal="pressed" from="VBoxContainer/Singleplayer" to="." method="_on_singleplayer_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Multiplayer" to="." method="_on_multiplayer_button_pressed"]
-[connection signal="pressed" from="2nd Screen/HBoxContainer/Enet" to="." method="_on_enet_pressed"]
-[connection signal="text_submitted" from="2nd Screen/EnetTab/IP" to="." method="_on_enet_ip_submitted"]
-[connection signal="pressed" from="2nd Screen/EnetTab/EnetButtons/Host" to="." method="_on_enet_host_pressed"]
-[connection signal="pressed" from="2nd Screen/EnetTab/EnetButtons/Join" to="." method="_on_enet_join_pressed"]
-[connection signal="pressed" from="2nd Screen/EnetTab/EnetButtons/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="1st Container/Singleplayer" to="." method="_on_singleplayer_button_pressed"]
+[connection signal="pressed" from="1st Container/Multiplayer" to="." method="_on_multiplayer_button_pressed"]
