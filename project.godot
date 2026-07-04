@@ -25,13 +25,9 @@ Network="*uid://cq3b8bnp6no5g"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-[easy_peasy_multiplayer]
-
-steam/enable_steam=true
-
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/easy_peasy_multiplayer/plugin.cfg", "res://addons/godotsteam/plugin.cfg")
+enabled=PackedStringArray("res://addons/easy_peasy_multiplayer/plugin.cfg")
 
 [file_customization]
 
