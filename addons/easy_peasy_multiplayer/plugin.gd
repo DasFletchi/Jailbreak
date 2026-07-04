@@ -20,7 +20,7 @@ const SETTINGS: Dictionary = {
 			"type": TYPE_BOOL,
 			"default_value": false,
 			"is_basic": true
-		}
+		} 
 	}
 }
 
