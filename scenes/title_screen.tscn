@@ -28,6 +28,7 @@ layout_mode = 2
 text = "Multiplayer"
 
 [node name="2nd Screen Multiplayer" type="Node2D" parent="." unique_id=1213294067]
+visible = false
 
 [node name="HOST" type="Button" parent="2nd Screen Multiplayer" unique_id=776052761]
 offset_left = 390.0
