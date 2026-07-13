@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5vxxt0ryg3ax"]
 
-[ext_resource type="PackedScene" uid="uid://drvbt01janxv1" path="res://assets/Modular Blueprint Kit/glTF/RP_1X2.gltf" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://q57akdgvsjsv" path="res://assets/Modular Blueprint Kit/glTF/FL_1X1.gltf" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://61b4bctuy3yq" path="res://assets/Modular Blueprint Kit/glTF/WL_CROSS.gltf" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://wxauruiuc8qd" path="res://assets/Modular Blueprint Kit/glTF/WL_WINDOW.gltf" id="2_jyhfs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,148 +28,22 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34001446, -0.23424911, -0.73098755)
 size = Vector3(30, 1, 30)
 
-[node name="env" type="Node" parent="." unique_id=1150847628]
+[node name="env" type="Node" parent="." unique_id=746808923]
 
-[node name="RP_1X23" type="Node3D" parent="env" unique_id=1253079361 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06696224, -0.001, -5.1674576)
+[node name="WL_CROSS2" type="Node3D" parent="env" unique_id=855150017 instance=ExtResource("1_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.265734, 0, 5.8247423)
 
-[node name="RP_1X24" type="Node3D" parent="env" unique_id=1056356606 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.001, -5)
+[node name="WL_CROSS3" type="Node3D" parent="env" unique_id=1107288483 instance=ExtResource("1_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92021, 0, -3.5683975)
 
-[node name="RP_1X25" type="Node3D" parent="env" unique_id=592047588 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.001, -5)
+[node name="WL_CROSS4" type="Node3D" parent="env" unique_id=281595018 instance=ExtResource("1_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.559684, 0, 7.053362)
 
-[node name="RP_1X26" type="Node3D" parent="env" unique_id=1953769140 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.001, -5)
+[node name="WL_CROSS5" type="Node3D" parent="env" unique_id=333832926 instance=ExtResource("1_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.851365, 0, -4.588993)
 
-[node name="RP_1X27" type="Node3D" parent="env" unique_id=1358641969 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.001, -5)
+[node name="WL_WINDOW2" type="Node3D" parent="env" unique_id=1612015397 instance=ExtResource("2_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.08751, 0, -1.3004456)
 
-[node name="RP_1X28" type="Node3D" parent="env" unique_id=87565099 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.001, -5)
-
-[node name="RP_1X29" type="Node3D" parent="env" unique_id=803387560 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -0.001, -5)
-
-[node name="RP_1X30" type="Node3D" parent="env" unique_id=977701238 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.001, -5)
-
-[node name="RP_1X31" type="Node3D" parent="env" unique_id=788587445 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.001, -3)
-
-[node name="RP_1X32" type="Node3D" parent="env" unique_id=2020226065 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.001, 2)
-
-[node name="RP_1X33" type="Node3D" parent="env" unique_id=521610246 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.001, 5)
-
-[node name="RP_1X34" type="Node3D" parent="env" unique_id=260732910 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.001, -1)
-
-[node name="RP_1X35" type="Node3D" parent="env" unique_id=980436157 instance=ExtResource("1_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.001, -2)
-
-[node name="FL_1X13" type="Node3D" parent="env" unique_id=267358537 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.499, -11)
-
-[node name="FL_1X14" type="Node3D" parent="env" unique_id=615786608 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499, -10)
-
-[node name="FL_1X15" type="Node3D" parent="env" unique_id=1255484275 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.499, -14)
-
-[node name="FL_1X16" type="Node3D" parent="env" unique_id=1040236916 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.499, -14)
-
-[node name="FL_1X17" type="Node3D" parent="env" unique_id=1844397802 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.499, -11)
-
-[node name="FL_1X18" type="Node3D" parent="env" unique_id=1685720504 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.499, -1)
-
-[node name="FL_1X19" type="Node3D" parent="env" unique_id=731573506 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.499, 3)
-
-[node name="FL_1X20" type="Node3D" parent="env" unique_id=1325974298 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.499, 8)
-
-[node name="FL_1X21" type="Node3D" parent="env" unique_id=878113301 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.499, 7)
-
-[node name="FL_1X22" type="Node3D" parent="env" unique_id=2092570809 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.499, -4)
-
-[node name="FL_1X23" type="Node3D" parent="env" unique_id=1109535205 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.499, -10)
-
-[node name="FL_1X24" type="Node3D" parent="env" unique_id=216985046 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.499, -11)
-
-[node name="FL_1X25" type="Node3D" parent="env" unique_id=1998919952 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.499, -13)
-
-[node name="FL_1X26" type="Node3D" parent="env" unique_id=77591022 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.499, -8)
-
-[node name="FL_1X27" type="Node3D" parent="env" unique_id=456286769 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.499, -5)
-
-[node name="FL_1X28" type="Node3D" parent="env" unique_id=1830885158 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.499, -1)
-
-[node name="FL_1X29" type="Node3D" parent="env" unique_id=1874871512 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.499, 9)
-
-[node name="FL_1X30" type="Node3D" parent="env" unique_id=314461907 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.499, -11)
-
-[node name="FL_1X31" type="Node3D" parent="env" unique_id=675606017 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.499, -13)
-
-[node name="FL_1X32" type="Node3D" parent="env" unique_id=962157912 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.499, -6)
-
-[node name="FL_1X33" type="Node3D" parent="env" unique_id=252143005 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.499, -3)
-
-[node name="FL_1X34" type="Node3D" parent="env" unique_id=1565226176 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.499, 2)
-
-[node name="FL_1X35" type="Node3D" parent="env" unique_id=2032348966 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.499, 8)
-
-[node name="FL_1X36" type="Node3D" parent="env" unique_id=1446216626 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.499, 7)
-
-[node name="FL_1X37" type="Node3D" parent="env" unique_id=532440139 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499, 9)
-
-[node name="FL_1X38" type="Node3D" parent="env" unique_id=210349326 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.499, 0)
-
-[node name="FL_1X39" type="Node3D" parent="env" unique_id=2008772630 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.752714, 0.99800056, -3.4608173)
-
-[node name="FL_1X40" type="Node3D" parent="env" unique_id=904509099 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6071153, 1.4970012, -3.8380146)
-
-[node name="FL_1X41" type="Node3D" parent="env" unique_id=330871982 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5263658, 1.9960012, -4.089855)
-
-[node name="FL_1X42" type="Node3D" parent="env" unique_id=280554963 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3198175, 2.4950018, -4.33109)
-
-[node name="FL_1X43" type="Node3D" parent="env" unique_id=578532731 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.960841, 2.994002, -4.7022314)
-
-[node name="FL_1X44" type="Node3D" parent="env" unique_id=1594451945 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.738994, 3.4930022, -5.1441402)
-
-[node name="FL_1X45" type="Node3D" parent="env" unique_id=2135295857 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.360519, 3.9920022, -5.6447716)
-
-[node name="FL_1X46" type="Node3D" parent="env" unique_id=1195849699 instance=ExtResource("2_sugp2")]
-transform = Transform3D(0.9999875, 0, -0.004999979, 0, 1, 0, 0.004999979, 0, 0.9999875, -3.9576225, 4.491002, -6.188728)
-
-[node name="FL_1X47" type="Node3D" parent="env" unique_id=662250668 instance=ExtResource("2_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6517186, 4.990002, -6.7601547)
+[node name="WL_WINDOW3" type="Node3D" parent="env" unique_id=1153921192 instance=ExtResource("2_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1991777, 0, -0.81898403)
