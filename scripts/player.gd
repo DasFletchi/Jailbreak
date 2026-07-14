@@ -1,6 +1,7 @@
 extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.005
 @onready var camera: Camera3D = $Camera3D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 const SPEED = 5.0
@@ -42,3 +43,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+	if velocity == Vector3.ZERO:
+			animation_player.play("idle")
