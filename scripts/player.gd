@@ -14,7 +14,7 @@ const JUMP_VELOCITY = 4.5
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	animation_player.playback_default_blend_time = anim_transition_time #geiles godot feature damit man nicht so snappy von animation zu animation wechselt
+	animation_player.playback_default_blend_time = anim_transition_time #geiles godot feature damit man nicht so snappy von animation zu animation wechselts
 
 
 
@@ -25,9 +25,9 @@ func _unhandled_input(event: InputEvent) -> void: #unhandled inputs heist eif nu
 		#it makes sense but it doesnt i guess please just with the rotate x and y thingies its annoying fr
 		#because in this cruel world rotate y means looking left/right we dont have the camera before that bc its fine if the whole player turns that fine its even wanted for nice fps movement
 		#but on the next x = y  and no we dont actually want to change the y rotation of the player then we'd fly thats not so cool
-# also warum auch immer: 
-#Maus X-Bewegung → Rotation um Y-Achse
-#Maus Y-Bewegung → Rotation um X-Achse
+		# also warum auch immer: 
+		#Maus X-Bewegung → Rotation um Y-Achse
+		#Maus Y-Bewegung → Rotation um X-Achse
 		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
 		#PI ist anschei9nend immer 180 grad einmal die untere hälfte der blase und die obere hälfte der blase wundewrbar in der mitte auf der x der realen x achse durchgeschnitten (pi lol schneiden)
 func _physics_process(delta: float) -> void:
