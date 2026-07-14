@@ -19,9 +19,8 @@ func _unhandled_input(event: InputEvent) -> void: #unhandled inputs heist eif nu
 # also warum auch immer: 
 #Maus X-Bewegung → Rotation um Y-Achse
 #Maus Y-Bewegung → Rotation um X-Achse
-
-
-
+		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
+		#PI ist anschei9nend immer 180 grad einmal die untere hälfte der blase und die obere hälfte der blase wundewrbar in der mitte auf der x der realen x achse durchgeschnitten (pi lol schneiden)
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
