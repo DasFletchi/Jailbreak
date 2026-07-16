@@ -68,9 +68,7 @@ Compiling the source code for personal use is allowed, but purchasing official r
 
 ## 8. Commercial Use
 
-Commercial use of Jailbreak or any part of the project is strictly prohibited unless explicit permission is granted by the creator.
-
-For commercial usage requests, contact the creator.
+Commercial use of Jailbreak or any part of the project is strictly prohibited.
 
 ## 9. Credits
 
