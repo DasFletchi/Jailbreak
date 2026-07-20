@@ -12,11 +12,10 @@ Du wachst in einer Zelle auf. Du kennst niemanden. Du hast nichts. In 15–20 Mi
 musst du mit ein paar Fremden (deinen Freunden) aus einem Gefängnis fliehen, das nie
 zweimal gleich aussieht, bewacht von Wachen, die nie zweimal gleich reagieren.
 Es gibt kein Skript, das dir sagt "so gewinnst du" – es gibt nur Systeme, die
-aufeinanderprallen, und die Frage: **wie schlau seid ihr gemeinsam?**
+aufeinanderprallen. 
 
-Kein Skript heißt: keine gescriptete Lösung ist "die richtige". Jede Flucht ist ein
-improvisierter Heist, der aus den Regeln der Welt entsteht, nicht aus
-Leveldesign-Handlungssträngen.
+
+Man kann auch verlieren da du ohnehin schon im Todestrakt bist oder so können Sie einfach gleich das ganze Gefängnis vergaß man Leben umbringen in diesen Trakt.
 
 ---
 
