@@ -71,3 +71,5 @@ speed_scale = 0.25
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=548081678]
 replication_config = SubResource("SceneReplicationConfig_o3ep8")
+
+[node name="you have to do this with the aniamted body because just doing that with the csgbox makes it a staticbody wich is not as great for stuff giving the player the velocity" type="Node" parent="." unique_id=1312769037]
