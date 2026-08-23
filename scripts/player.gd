@@ -7,7 +7,7 @@ extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
-const SPEED = 5.0
+@export var SPEED = 5.0
 const JUMP_VELOCITY = 4.8
 
 # --- Brutal-but-fair gravity (tweak these to taste!) ---
