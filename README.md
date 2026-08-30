@@ -1,4 +1,6 @@
 # Peak Panic
+# NO LONGER MAINTAINED DUE TO ME DELETING ALL MY FOOTAGE FROM OBS
+
 
 competitive party game game made with the Godot game engine and the netfox suite.
 
